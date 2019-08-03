@@ -1,6 +1,30 @@
 # slx
 Script Langugage eXperiment written in Fitted Software Tools Modula-2
 
+Keywords: 
+```
+END
+REQUIRE
+GETLINE
+EXECUTE
+DEFINE
+GETKEY
+YESNO
+ONERROR
+SAVEDICT
+LOADDICT
+SKIP
+DEBUG
+MENU
+TRANSLATION
+CHDIR
+TRACEON
+TRACEOFF
+SAY
+ATSAY
+AT
+```
+
 v1.2/ contains an idea about variable storage.
 
 See the [xlb](https://github.com/axtens/xlb) project for required non-FST libraries.
