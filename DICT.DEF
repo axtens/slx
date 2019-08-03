@@ -1,0 +1,19 @@
+DEFINITION MODULE Dict;
+
+    TYPE
+        aDict;
+
+    PROCEDURE DictCreate() : aDict;
+    PROCEDURE DictInsert( VAR aD : aDict; sSym, sDef : ARRAY OF CHAR);
+    PROCEDURE DictRetrieve( aD : aDict; sSym : ARRAY OF CHAR; VAR sDef : ARRAY OF CHAR);
+    PROCEDURE DictGet( aD : aDict; cIndex : CARDINAL; VAR sSym, sDef : ARRAY OF CHAR);
+    PROCEDURE DictSubst( aD : aDict; VAR cString : ARRAY OF CHAR; nSwaps : CARDINAL);
+    PROCEDURE DictSave( aD : aDict; cFileName : ARRAY OF CHAR);
+    PROCEDURE DictLoad( VAR aD : aDict; cFileName : ARRAY OF CHAR);
+    PROCEDURE DictSize( aD : aDict) : CARDINAL;
+    PROCEDURE SetDictDebug( lFlag : BOOLEAN);
+    PROCEDURE DictDestroy( aD : aDict);
+END Dict.
+
+
+

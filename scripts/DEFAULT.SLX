@@ -1,0 +1,20 @@
+ONERROR FAIL
+DEFINE MESSAGE "EXECUTE ECHO"
+DEFINE CLS "EXECUTE CLS"
+DEFINE MOVE "EXECUTE C:\DOS\MOVE.EXE"
+@CLS
+@MESSAGE U.C. Setup. Installation of VENDOR and DOCS.
+GETKEY $s "Source drive: "
+GETKEY $d "Destination drive: "
+REQUIRE @$s.:V&D_INST.EXE
+YESNO "Are you sure you want to install VENDOR?" 4
+@MOVE @$d.:\VENDOR\VENDOR.EXE @$d.:\VENDOR\BACKUP
+EXECUTE @$s.:V&D_INST.EXE -y @$d.:\VENDOR\ VENDOR.EXE
+@MESSAGE New version of Vendor installed.
+YESNO "Are you sure you want to install DOCS?" 4
+@MOVE @$d.:\DOCS\DOCS.EXE @$d.:\DOCS\BACKUP
+EXECUTE @$s.:V&D_INST.EXE -y @$d.:\DOCS\ DOCS.EXE
+@MESSAGE New version of DOCS installed.
+END
+
+

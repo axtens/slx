@@ -1,0 +1,5 @@
+execute for %f in (map bak obj) do if exist *.%f del *.%f
+execute for %f in (*.c) do if exist %@name[%f].com del %@name[%f].com
+execute for %f in (*.c) do if exist %@name[%f].exe del %@name[%f].exe
+end
+

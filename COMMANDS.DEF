@@ -1,0 +1,15 @@
+DEFINITION MODULE Commands;
+
+FROM Dict IMPORT aDict;
+
+    PROCEDURE SetCommandsDebug( bFlag : BOOLEAN);
+    PROCEDURE Require( ) : BOOLEAN;
+    PROCEDURE GetLine( ) : BOOLEAN;
+    PROCEDURE Execute( ) : BOOLEAN;
+    PROCEDURE Process( VAR Dictionary : aDict ) : CARDINAL;
+
+
+
+END Commands.
+
+

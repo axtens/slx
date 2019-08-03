@@ -1,0 +1,6 @@
+DEFINE CLS "EXECUTE CLS"
+@CLS
+@CLS hi there
+END
+
+

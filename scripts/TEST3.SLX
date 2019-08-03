@@ -1,0 +1,11 @@
+DEFINE CLS "EXECUTE CLS"
+@CLS
+YESNO "Iterate " 1 3
+SAY Iterating
+SKIP -2
+@CLS
+ATSAY 10 10 "End of iterations"
+SAVEDICT save.dic
+END
+
+

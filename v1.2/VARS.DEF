@@ -1,0 +1,36 @@
+DEFINITION MODULE Vars;
+
+(* (C) Copyright 1992 Fitted Software Tools. All rights reserved. *)
+
+FROM Lists      IMPORT LinkedListItem, LinkedList;
+
+
+(* DEFINITION *) CLASS VarsLinkedListItem;
+(*
+    VarsLinkedListItem adds the print method to LinkedListItem.
+*)
+
+    INHERIT LinkedListItem;
+
+END VarsLinkedListItem;
+
+
+
+(* DEFINITION *) CLASS VarsLinkedList;
+(*
+    VarsLinkedList is like LinkedList. We define this new class for
+    consistency sake only.
+*)
+
+    INHERIT LinkedList;
+    sVarName : ARRAY [0..9] OF CHAR;
+    sValue   : ARRAY [0..254] OF CHAR;
+
+    PROCEDURE vInsert( oItem : VarsLinkedListItem); (* if exists, updates, else inserts *)
+    PROCEDURE vDelete( oItem : VarsLinkedListItem) : BOOLEAN;
+    PROCEDURE vFetch( VAR oItem : VarsLinkedListItem) : BOOLEAN;
+END VarsLinkedList;
+
+
+END Vars.
+

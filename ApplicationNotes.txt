@@ -1,0 +1,13 @@
+*LABEL <NAME>
+
+    stores nPC in datadict as
+        <name> <nPC [as char]>
+
+    may have to pass nPC to Process()
+
+
+*SKIPTO <label>
+
+    finds name id datadict, calcuates diff between lineno in dd and nPC and
+    sets $incr to get there
+
